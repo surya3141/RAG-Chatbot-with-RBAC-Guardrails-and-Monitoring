@@ -1,0 +1,73 @@
+Q3 2024 Financial Report — TechCorp Inc.
+========================================
+
+EXECUTIVE SUMMARY
+-----------------
+TechCorp Inc. delivered strong performance in Q3 2024, with total revenue of $2.5 million,
+representing a 15% increase compared to Q2 2024 ($2.17 million). Net income reached $700K,
+reflecting improved operational efficiency and disciplined cost management.
+
+REVENUE BREAKDOWN
+-----------------
+Product Licensing:        $1,200,000   (48% of total revenue)
+Professional Services:      $800,000   (32% of total revenue)
+Maintenance & Support:      $500,000   (20% of total revenue)
+Total Revenue:            $2,500,000
+
+OPERATING EXPENSES
+------------------
+Personnel Costs:            $950,000
+Marketing & Advertising:    $300,000
+Research & Development:     $450,000
+General & Administrative:   $200,000
+Infrastructure & Cloud:     $100,000
+Total Operating Expenses: $2,000,000
+
+PROFITABILITY
+-------------
+Gross Profit:               $1,850,000  (74% gross margin)
+Operating Income:             $500,000
+Net Income:                   $700,000  (28% net margin)
+EBITDA:                       $820,000
+
+BUDGET ALLOCATION — Q4 2024 OUTLOOK
+-------------------------------------
+Marketing Budget:            $320,000  (+6.7% from Q3)
+R&D Investment:              $500,000  (+11.1% from Q3)
+Headcount Additions:          15 FTEs  (Engineering: 8, Sales: 4, G&A: 3)
+Capital Expenditures:        $150,000  (Server upgrades, dev tooling)
+
+KEY PERFORMANCE INDICATORS
+---------------------------
+Customer Acquisition Cost (CAC):   $4,200
+Customer Lifetime Value (CLV):    $38,500
+CLV:CAC Ratio:                       9.2x
+Monthly Recurring Revenue (MRR):  $833,333
+Annual Recurring Revenue (ARR):  $10,000,000
+Net Revenue Retention (NRR):         112%
+Churn Rate:                           2.1%
+
+CASH FLOW STATEMENT (Q3 2024)
+------------------------------
+Operating Cash Flow:         $780,000
+Investing Activities:       ($150,000)
+Financing Activities:              $0
+Net Change in Cash:          $630,000
+Closing Cash Balance:      $4,200,000
+
+YEAR-TO-DATE SUMMARY (Jan–Sep 2024)
+------------------------------------
+YTD Revenue:               $6,850,000
+YTD Net Income:            $1,920,000
+YTD R&D Spend:             $1,250,000
+YTD Marketing Spend:         $870,000
+
+RISK FACTORS
+------------
+1. Foreign exchange exposure: 18% of revenue denominated in EUR and GBP.
+2. Key customer concentration: Top 5 customers represent 34% of total revenue.
+3. Competitive pressure in the mid-market segment requiring accelerated product investment.
+
+APPROVED BY: Chief Financial Officer
+DATE: October 15, 2024
+CLASSIFICATION: CONFIDENTIAL — Finance Department Only
