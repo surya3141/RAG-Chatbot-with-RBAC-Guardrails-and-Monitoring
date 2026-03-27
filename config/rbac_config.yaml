@@ -1,0 +1,59 @@
+# RBAC configuration: maps roles to allowed document categories.
+
+roles:
+  finance:
+    description: "Finance team – access to financial reports and marketing expenses"
+    allowed_categories:
+      - finance
+      - marketing_expenses
+    allowed_keywords:
+      - budget
+      - revenue
+      - expenses
+      - financial
+      - profit
+      - loss
+      - marketing
+      - forecast
+      - quarter
+      - fiscal
+
+  hr:
+    description: "HR team – access to employee data and payroll"
+    allowed_categories:
+      - hr
+      - payroll
+      - employee
+    allowed_keywords:
+      - employee
+      - payroll
+      - salary
+      - benefits
+      - hiring
+      - onboarding
+      - performance
+      - headcount
+      - compensation
+      - leave
+
+  csuite:
+    description: "C-suite – full access to all data"
+    allowed_categories:
+      - finance
+      - marketing_expenses
+      - hr
+      - payroll
+      - employee
+      - strategy
+      - operations
+    allowed_keywords: []  # empty means no restriction
+
+# Out-of-scope topics that should be blocked for all roles
+out_of_scope_topics:
+  - "personal relationships"
+  - "political opinions"
+  - "illegal activities"
+  - "competitor secrets"
+  - "stock tips"
+  - "medical advice"
+  - "legal advice"

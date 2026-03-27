@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ChromaDB local storage
+chroma_db/
+*.db
+
+# LangSmith / LangChain cache
+.langchain.db
+langchain_cache/
+
+# Data files (sample data committed; large files ignored)
+*.pdf
+*.docx
+*.xlsx
+*.csv
+
+# Logs
+*.log
+logs/
+
+# Monitoring outputs
+monitoring_reports/
+
+# Azure
+.azure/

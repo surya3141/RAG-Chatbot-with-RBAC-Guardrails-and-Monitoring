@@ -1,0 +1,112 @@
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  PYTHON_VERSION: "3.11"
+  ACR_NAME: $(acrName)
+  IMAGE_NAME: rag-chatbot
+  IMAGE_TAG: $(Build.BuildId)
+
+stages:
+  # -------------------------------------------------------------------------
+  # Stage 1: Lint, test, and evaluate
+  # -------------------------------------------------------------------------
+  - stage: Test
+    displayName: "Test & Evaluate"
+    jobs:
+      - job: RunTests
+        displayName: "Run unit tests"
+        steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: "$(PYTHON_VERSION)"
+
+          - script: |
+              pip install -r requirements.txt
+              python -m spacy download en_core_web_lg || true
+            displayName: "Install dependencies"
+
+          - script: |
+              pytest tests/ -v --tb=short
+            displayName: "Run pytest"
+            env:
+              GROQ_API_KEY: $(GROQ_API_KEY)
+
+  # -------------------------------------------------------------------------
+  # Stage 2: Build and push Docker image
+  # -------------------------------------------------------------------------
+  - stage: Build
+    displayName: "Build & Push Image"
+    dependsOn: Test
+    condition: succeeded()
+    jobs:
+      - job: BuildImage
+        displayName: "Docker build & push to ACR"
+        steps:
+          - task: Docker@2
+            displayName: "Build and push image"
+            inputs:
+              command: buildAndPush
+              repository: $(IMAGE_NAME)
+              dockerfile: deployment/Dockerfile
+              containerRegistry: $(dockerRegistryServiceConnection)
+              tags: |
+                $(IMAGE_TAG)
+                latest
+
+  # -------------------------------------------------------------------------
+  # Stage 3: Deploy to Azure Container Apps
+  # -------------------------------------------------------------------------
+  - stage: Deploy
+    displayName: "Deploy to Azure"
+    dependsOn: Build
+    condition: succeeded()
+    jobs:
+      - job: DeployApp
+        displayName: "Deploy container app"
+        steps:
+          - task: AzureCLI@2
+            displayName: "Deploy to Azure Container Apps"
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                az containerapp update \
+                  --name rag-chatbot \
+                  --resource-group $(resourceGroup) \
+                  --image $(ACR_NAME).azurecr.io/$(IMAGE_NAME):$(IMAGE_TAG) \
+                  --set-env-vars \
+                    GROQ_API_KEY=secretref:groq-api-key \
+                    LANGCHAIN_TRACING_V2=true \
+                    LANGCHAIN_API_KEY=secretref:langsmith-api-key
+
+  # -------------------------------------------------------------------------
+  # Stage 4: Post-deploy automated evaluation
+  # -------------------------------------------------------------------------
+  - stage: PostDeployEval
+    displayName: "Automated Evaluation"
+    dependsOn: Deploy
+    condition: succeeded()
+    jobs:
+      - job: RunEvals
+        displayName: "RAGAS evaluation after deploy"
+        steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: "$(PYTHON_VERSION)"
+
+          - script: pip install -r requirements.txt
+            displayName: "Install deps"
+
+          - script: python scripts/run_evals.py
+            displayName: "Run RAGAS evaluation"
+            env:
+              GROQ_API_KEY: $(GROQ_API_KEY)
+              LANGCHAIN_API_KEY: $(LANGCHAIN_API_KEY)
