@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+# Default minimal permissions for all jobs
+permissions:
+  contents: read
+
 env:
   PYTHON_VERSION: "3.11"
   IMAGE_NAME: rag-chatbot
@@ -15,6 +19,8 @@ jobs:
   lint:
     name: Lint (flake8)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
 
@@ -48,6 +54,9 @@ jobs:
     name: Test (pytest)
     runs-on: ubuntu-latest
     needs: lint
+    permissions:
+      contents: read
+      checks: write  # required to publish test results
 
     steps:
       - uses: actions/checkout@v4
@@ -93,6 +102,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    permissions:
+      contents: read
+      packages: write  # required if pushing to GHCR
 
     steps:
       - uses: actions/checkout@v4

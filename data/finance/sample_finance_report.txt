@@ -1,10 +1,10 @@
-Q3 2024 Financial Report — TechCorp Inc.
+Q3 2025 Financial Report — TechCorp Inc.
 ========================================
 
 EXECUTIVE SUMMARY
 -----------------
-TechCorp Inc. delivered strong performance in Q3 2024, with total revenue of $2.5 million,
-representing a 15% increase compared to Q2 2024 ($2.17 million). Net income reached $700K,
+TechCorp Inc. delivered strong performance in Q3 2025, with total revenue of $2.5 million,
+representing a 15% increase compared to Q2 2025 ($2.17 million). Net income reached $700K,
 reflecting improved operational efficiency and disciplined cost management.
 
 REVENUE BREAKDOWN
@@ -30,7 +30,7 @@ Operating Income:             $500,000
 Net Income:                   $700,000  (28% net margin)
 EBITDA:                       $820,000
 
-BUDGET ALLOCATION — Q4 2024 OUTLOOK
+BUDGET ALLOCATION — Q4 2025 OUTLOOK
 -------------------------------------
 Marketing Budget:            $320,000  (+6.7% from Q3)
 R&D Investment:              $500,000  (+11.1% from Q3)
@@ -47,7 +47,7 @@ Annual Recurring Revenue (ARR):  $10,000,000
 Net Revenue Retention (NRR):         112%
 Churn Rate:                           2.1%
 
-CASH FLOW STATEMENT (Q3 2024)
+CASH FLOW STATEMENT (Q3 2025)
 ------------------------------
 Operating Cash Flow:         $780,000
 Investing Activities:       ($150,000)
@@ -55,7 +55,7 @@ Financing Activities:              $0
 Net Change in Cash:          $630,000
 Closing Cash Balance:      $4,200,000
 
-YEAR-TO-DATE SUMMARY (Jan–Sep 2024)
+YEAR-TO-DATE SUMMARY (Jan–Sep 2025)
 ------------------------------------
 YTD Revenue:               $6,850,000
 YTD Net Income:            $1,920,000
@@ -69,5 +69,5 @@ RISK FACTORS
 3. Competitive pressure in the mid-market segment requiring accelerated product investment.
 
 APPROVED BY: Chief Financial Officer
-DATE: October 15, 2024
+DATE: October 15, 2025
 CLASSIFICATION: CONFIDENTIAL — Finance Department Only

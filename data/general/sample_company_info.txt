@@ -4,7 +4,7 @@ About TechCorp Inc.
 COMPANY OVERVIEW
 ----------------
 TechCorp Inc. is a B2B software company specialising in enterprise data analytics and
-AI-powered workflow automation. Founded in 2018 and headquartered in San Francisco, CA,
+AI-powered workflow automation. Founded in 2020 and headquartered in San Francisco, CA,
 TechCorp serves over 200 enterprise customers across North America, Europe, and Asia-Pacific.
 
 Mission Statement
@@ -23,11 +23,11 @@ Core Values
 
 COMPANY FACTS
 --------------
-Founded:               2018
+Founded:               2020
 Headquarters:          San Francisco, CA, USA
 Secondary Offices:     New York, NY | London, UK | Singapore
-Employees:             ~320 full-time (as of Q3 2024)
-Annual Revenue (ARR):  ~$10M (2024 projection)
+Employees:             ~320 full-time (as of Q3 2025)
+Annual Revenue (ARR):  ~$10M (2025 projection)
 Customers:             200+ enterprise clients
 Industries Served:     Financial Services, Healthcare, Retail, Manufacturing, Government
 
@@ -80,9 +80,9 @@ CERTIFICATIONS & AWARDS
 ------------------------
 - SOC 2 Type II (since 2021)
 - ISO 9001:2015 Quality Management
-- Gartner Cool Vendor in Analytics (2023)
-- Forbes Cloud 100 Emerging Companies (2023)
-- Best Places to Work — SF Bay Area (2022, 2023)
+- Gartner Cool Vendor in Analytics (2024)
+- Forbes Cloud 100 Emerging Companies (2024)
+- Best Places to Work — SF Bay Area (2023, 2024)
 
 CONTACT & RESOURCES
 --------------------
