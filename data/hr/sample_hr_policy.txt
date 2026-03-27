@@ -1,0 +1,146 @@
+TechCorp Inc. — Employee Handbook & HR Policies
+================================================
+Version: 2025.1 | Effective Date: January 1, 2025
+Human Resources Department
+
+TABLE OF CONTENTS
+-----------------
+1. Leave Policies
+2. Compensation & Payroll
+3. Performance Management
+4. Benefits & Perks
+5. Code of Conduct
+6. Training & Development
+7. Recruitment & Onboarding
+8. Disciplinary Procedures
+
+SECTION 1: LEAVE POLICIES
+--------------------------
+Annual Leave
+  - Full-time employees: 20 days per calendar year
+  - Part-time employees: Pro-rated based on contracted hours
+  - Leave accrual begins from the first day of employment
+  - Maximum carryover: 5 days into the following calendar year
+  - Unused leave beyond carryover limit is forfeited
+
+Sick Leave
+  - Entitlement: 10 days per calendar year
+  - Sick leave does not accumulate; unused days reset annually
+  - A medical certificate is required for absences exceeding 3 consecutive days
+  - Compassionate leave: Up to 5 days per bereavement event
+
+Parental Leave
+  - Primary caregiver: 16 weeks fully paid
+  - Secondary caregiver: 4 weeks fully paid
+  - Applicable from the first day of employment with no tenure requirement
+
+Public Holidays
+  - All federally recognised public holidays are observed
+  - Employees required to work on public holidays receive 1.5x overtime pay
+
+SECTION 2: COMPENSATION & PAYROLL
+-----------------------------------
+Payroll Processing
+  - Payroll is processed on the 25th of each calendar month
+  - If the 25th falls on a weekend or public holiday, payment is made on the preceding
+    business day
+  - All employees are paid via direct bank transfer
+
+Salary Review
+  - Annual salary review conducted in December of each year
+  - Merit increases are effective from January 1 of the following year
+  - Market benchmarking is conducted using industry salary surveys
+
+Overtime
+  - Non-exempt employees: Overtime paid at 1.5x for hours beyond 40/week
+  - Exempt employees: Compensatory time-off awarded at manager discretion
+
+Expense Reimbursement
+  - Business expenses must be submitted within 30 days of incurrence
+  - Receipts required for all expenses over $25
+  - Reimbursements processed with the following month's payroll
+
+SECTION 3: PERFORMANCE MANAGEMENT
+------------------------------------
+Performance Review Cycle
+  - Reviews are conducted on a bi-annual basis: June and December
+  - Mid-year check-in: June (informal, developmental focus)
+  - Year-end review: December (formal, compensation-linked)
+
+Rating Scale
+  - 5 — Exceptional: Consistently exceeds all expectations
+  - 4 — Exceeds Expectations: Regularly surpasses requirements
+  - 3 — Meets Expectations: Consistently fulfils role requirements
+  - 2 — Needs Improvement: Partially meets expectations; improvement plan required
+  - 1 — Unsatisfactory: Fails to meet expectations; subject to disciplinary action
+
+Performance Improvement Plan (PIP)
+  - Employees rated 2 or below are placed on a 90-day PIP
+  - PIP outlines specific, measurable improvement objectives
+  - Failure to meet PIP objectives may result in termination
+
+SECTION 4: BENEFITS & PERKS
+------------------------------
+Health Insurance
+  - Medical, dental, and vision coverage provided from day 1
+  - TechCorp covers 80% of employee premiums; 60% for dependants
+
+Retirement
+  - 401(k) plan with 4% employer match (vesting: 2-year cliff)
+  - Plan administered by Fidelity Investments
+
+Additional Perks
+  - Remote work: Up to 3 days per week (role-dependent)
+  - Home office stipend: $500 one-time upon joining; $200 annual refresh
+  - Learning & development budget: $1,500 per employee per year
+  - Gym/wellness reimbursement: Up to $50/month
+  - Team lunch budget: $25/person/month
+
+SECTION 5: CODE OF CONDUCT
+-----------------------------
+All employees are expected to:
+  - Act with integrity and professionalism at all times
+  - Maintain confidentiality of company and client information
+  - Report conflicts of interest to HR and management
+  - Treat all colleagues with respect; zero tolerance for harassment
+  - Comply with all applicable laws and company policies
+
+SECTION 6: TRAINING & DEVELOPMENT
+------------------------------------
+Mandatory Training
+  - Information Security Awareness: Annually
+  - Anti-Harassment & Workplace Safety: Annually
+  - Data Privacy (GDPR/CCPA): Annually for all staff handling personal data
+
+Development Programmes
+  - Manager training: New managers complete a 6-week leadership programme
+  - Mentoring: Formal mentoring programme pairs juniors with senior staff
+  - Conference attendance: Supported for high performers (budget permitting)
+
+SECTION 7: RECRUITMENT & ONBOARDING
+--------------------------------------
+Hiring Process
+  - All vacancies posted internally for a minimum of 5 business days
+  - External job boards: LinkedIn, Indeed, Glassdoor
+  - Interview panels must include at least one member from HR
+
+Onboarding
+  - 30-60-90 day plan provided to all new hires on Day 1
+  - Buddy system: Each new hire assigned a peer buddy for the first 90 days
+  - IT equipment provisioned before the start date
+
+SECTION 8: DISCIPLINARY PROCEDURES
+-------------------------------------
+Progressive Discipline
+  1. Verbal warning (documented in employee file)
+  2. Written warning
+  3. Final written warning
+  4. Termination
+
+Gross Misconduct
+  - Acts of gross misconduct (e.g., fraud, harassment, data breach) may result in
+    immediate termination without prior warnings
+
+APPROVED BY: Chief People Officer
+DATE: January 1, 2025
+CLASSIFICATION: CONFIDENTIAL — HR Department & All Employees

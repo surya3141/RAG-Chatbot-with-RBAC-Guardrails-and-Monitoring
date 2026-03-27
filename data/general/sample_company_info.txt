@@ -1,0 +1,94 @@
+About TechCorp Inc.
+===================
+
+COMPANY OVERVIEW
+----------------
+TechCorp Inc. is a B2B software company specialising in enterprise data analytics and
+AI-powered workflow automation. Founded in 2020 and headquartered in San Francisco, CA,
+TechCorp serves over 200 enterprise customers across North America, Europe, and Asia-Pacific.
+
+Mission Statement
+  "To deliver innovative, secure, and intelligent software solutions that empower
+   organisations to make better decisions and work more effectively."
+
+Vision
+  To become the leading provider of AI-native enterprise automation by 2028.
+
+Core Values
+  1. Customer Obsession — Everything we do starts with our customers' needs.
+  2. Integrity — We act with honesty and transparency in all interactions.
+  3. Innovation — We embrace change and continuously improve our products.
+  4. Inclusion — We build diverse teams and foster a culture of belonging.
+  5. Excellence — We hold ourselves to the highest standards of quality.
+
+COMPANY FACTS
+--------------
+Founded:               2020
+Headquarters:          San Francisco, CA, USA
+Secondary Offices:     New York, NY | London, UK | Singapore
+Employees:             ~320 full-time (as of Q3 2025)
+Annual Revenue (ARR):  ~$10M (2025 projection)
+Customers:             200+ enterprise clients
+Industries Served:     Financial Services, Healthcare, Retail, Manufacturing, Government
+
+PRODUCTS & SERVICES
+--------------------
+1. TechCorp Insights Platform
+   - Real-time business intelligence dashboards
+   - Predictive analytics powered by proprietary ML models
+   - Integrations with Salesforce, SAP, Workday, and 50+ data sources
+
+2. TechCorp Automate
+   - Low-code workflow automation builder
+   - AI document processing (OCR + NLP extraction)
+   - Robotic Process Automation (RPA) capabilities
+
+3. Professional Services
+   - Implementation consulting (average engagement: 6–12 weeks)
+   - Data engineering and migration services
+   - Custom model development
+
+LEADERSHIP TEAM
+----------------
+Chief Executive Officer (CEO):          [Refer to internal directory]
+Chief Financial Officer (CFO):          [Refer to internal directory]
+Chief Technology Officer (CTO):         [Refer to internal directory]
+Chief People Officer (CPO):             [Refer to internal directory]
+Chief Revenue Officer (CRO):            [Refer to internal directory]
+VP of Engineering:                      [Refer to internal directory]
+VP of Customer Success:                 [Refer to internal directory]
+
+DEPARTMENTS
+-----------
+Engineering:       ~120 employees (Backend, Frontend, ML/AI, Platform, QA)
+Sales & Marketing: ~60 employees (Enterprise Sales, SDRs, Marketing, Partnerships)
+Customer Success:  ~40 employees (Implementation, Support, Account Management)
+Finance:           ~15 employees
+HR & People Ops:   ~12 employees
+Legal & Compliance:~8 employees
+G&A / Operations:  ~65 employees (IT, Facilities, EA, Finance Ops)
+
+COMPANY POLICIES SUMMARY
+--------------------------
+Remote Work:       Hybrid (3 days in office recommended for most roles)
+Work Hours:        Flexible; core hours 10:00 AM – 3:00 PM local time
+Communication:     Slack (internal), Google Workspace (email, docs, calendar)
+Security:          SOC 2 Type II certified; ISO 27001 in progress
+Data Privacy:      GDPR and CCPA compliant
+
+CERTIFICATIONS & AWARDS
+------------------------
+- SOC 2 Type II (since 2021)
+- ISO 9001:2015 Quality Management
+- Gartner Cool Vendor in Analytics (2024)
+- Forbes Cloud 100 Emerging Companies (2024)
+- Best Places to Work — SF Bay Area (2023, 2024)
+
+CONTACT & RESOURCES
+--------------------
+Internal Wiki:         https://wiki.techcorp.internal
+IT Help Desk:          it-support@techcorp.internal  |  Ext. 5500
+HR Queries:            hr@techcorp.internal          |  Ext. 5200
+Finance Queries:       finance@techcorp.internal     |  Ext. 5300
+
+CLASSIFICATION: INTERNAL — All Employees

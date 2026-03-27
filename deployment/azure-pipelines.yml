@@ -1,0 +1,144 @@
+# Azure DevOps pipeline for RAG Chatbot CI/CD
+# Triggers on every push to main; deploys to Azure Container Apps
+
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
+variables:
+  # Azure Container Registry
+  ACR_NAME: "ragchatbotacr"
+  ACR_LOGIN_SERVER: "$(ACR_NAME).azurecr.io"
+  IMAGE_NAME: "rag-chatbot"
+  IMAGE_TAG: "$(Build.BuildId)"
+  # Azure Container Apps
+  ACA_RESOURCE_GROUP: "rag-chatbot-rg"
+  ACA_ENVIRONMENT: "rag-chatbot-env"
+  ACA_APP_NAME: "rag-chatbot-app"
+  AZURE_SUBSCRIPTION: "AzureServiceConnection"
+
+stages:
+  # ── Build & Test ────────────────────────────────────────────────────────────
+  - stage: BuildAndTest
+    displayName: "Build and Test"
+    jobs:
+      - job: LintAndTest
+        displayName: "Lint, Type-check, and Test"
+        pool:
+          vmImage: "ubuntu-latest"
+        steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: "3.11"
+            displayName: "Use Python 3.11"
+
+          - script: |
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt
+              pip install flake8 mypy
+            displayName: "Install dependencies"
+
+          - script: |
+              flake8 src/ config/ scripts/ app/ tests/ \
+                --max-line-length=120 \
+                --exclude=__pycache__ \
+                --count --statistics
+            displayName: "Lint with flake8"
+
+          - script: |
+              python -m pytest tests/ \
+                --tb=short \
+                --junitxml=test-results.xml \
+                -v
+            displayName: "Run pytest"
+
+          - task: PublishTestResults@2
+            condition: always()
+            inputs:
+              testResultsFormat: "JUnit"
+              testResultsFiles: "test-results.xml"
+              testRunTitle: "Unit Tests"
+
+  # ── Docker Build & Push ────────────────────────────────────────────────────
+  - stage: DockerBuild
+    displayName: "Build & Push Docker Image"
+    dependsOn: BuildAndTest
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - job: BuildPush
+        displayName: "Build and push to ACR"
+        pool:
+          vmImage: "ubuntu-latest"
+        steps:
+          - task: Docker@2
+            displayName: "Login to ACR"
+            inputs:
+              command: login
+              containerRegistry: "$(AZURE_SUBSCRIPTION)"
+
+          - task: Docker@2
+            displayName: "Build Docker image"
+            inputs:
+              command: build
+              repository: "$(ACR_LOGIN_SERVER)/$(IMAGE_NAME)"
+              dockerfile: "deployment/Dockerfile"
+              buildContext: "."
+              tags: |
+                $(IMAGE_TAG)
+                latest
+
+          - task: Docker@2
+            displayName: "Push Docker image"
+            inputs:
+              command: push
+              repository: "$(ACR_LOGIN_SERVER)/$(IMAGE_NAME)"
+              tags: |
+                $(IMAGE_TAG)
+                latest
+
+  # ── Deploy to Azure Container Apps ────────────────────────────────────────
+  - stage: Deploy
+    displayName: "Deploy to Azure Container Apps"
+    dependsOn: DockerBuild
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - deployment: DeployApp
+        displayName: "Deploy to ACA"
+        environment: "production"
+        pool:
+          vmImage: "ubuntu-latest"
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: AzureCLI@2
+                  displayName: "Deploy to Azure Container Apps"
+                  inputs:
+                    azureSubscription: "$(AZURE_SUBSCRIPTION)"
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      az containerapp update \
+                        --name $(ACA_APP_NAME) \
+                        --resource-group $(ACA_RESOURCE_GROUP) \
+                        --image $(ACR_LOGIN_SERVER)/$(IMAGE_NAME):$(IMAGE_TAG)
+
+                - task: AzureCLI@2
+                  displayName: "Verify deployment health"
+                  inputs:
+                    azureSubscription: "$(AZURE_SUBSCRIPTION)"
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      APP_URL=$(az containerapp show \
+                        --name $(ACA_APP_NAME) \
+                        --resource-group $(ACA_RESOURCE_GROUP) \
+                        --query "properties.configuration.ingress.fqdn" \
+                        --output tsv)
+                      echo "App deployed at: https://$APP_URL"
